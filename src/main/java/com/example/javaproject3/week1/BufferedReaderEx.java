@@ -13,4 +13,11 @@ public class BufferedReaderEx {
         System.out.println("line1 = " + br.readLine());
         System.out.println("line2 = " + br.readLine());
     }
+
+    public void plusTwoNums() throws IOException {
+        // InputStreamReader를 직접 넘겨 주는 방식
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        // 입력받은 두 값 더하기
+        System.out.println(br.readLine() + br.readLine());
+    }
 }
