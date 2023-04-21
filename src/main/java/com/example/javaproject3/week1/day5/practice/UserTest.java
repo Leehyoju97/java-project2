@@ -7,6 +7,7 @@ public class UserTest {
         user.phoneNumber = "010-1111-1212";
         user.age = 27;
 
-        System.out.printf("이름 : %s 폰번호 : %s, 나이 : %d", user.name, user.phoneNumber, user.age);
+        System.out.printf("이름 : %s 폰번호 : %s, 나이 : %d\n", user.name, user.phoneNumber, user.age);
+        System.out.printf("%s님은 성인인가요? : %s", user.name, user.isAdult());
     }
 }
