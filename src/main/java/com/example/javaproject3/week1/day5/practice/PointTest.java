@@ -20,5 +20,7 @@ public class PointTest {
         p3.x = 3;
         p3.y = 2;
         System.out.printf("xy가 같은지? %s\n", p3.isSameXy());
+
+        System.out.println(p3.getDistance(p1));
     }
 }
