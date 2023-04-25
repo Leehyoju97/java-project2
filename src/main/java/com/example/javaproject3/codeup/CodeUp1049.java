@@ -2,13 +2,16 @@ package com.example.javaproject3.codeup;
 
 import java.util.Scanner;
 
-public class CodeUp1047 {
+public class CodeUp1049 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
 
-        System.out.println(n << 1);
+        int answer = (a > b) ? 1 : 0;
+
+        System.out.println(answer);
     }
 }
