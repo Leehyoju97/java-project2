@@ -1,0 +1,41 @@
+package com.example.javaproject3.codeup;
+
+import java.util.Scanner;
+
+public class CodeUp1070 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        String answer = "";
+
+        switch (n) {
+            case 3 :
+            case 4 :
+            case 5 :
+                answer = "spring";
+                break;
+
+            case 6 :
+            case 7 :
+            case 8 :
+                answer = "summer";
+                break;
+
+            case 9 :
+            case 10 :
+            case 11 :
+                answer = "fall";
+                break;
+
+            case 1 :
+            case 2 :
+            case 12 :
+                answer = "winter";
+                break;
+        }
+
+        System.out.println(answer);
+    }
+}
