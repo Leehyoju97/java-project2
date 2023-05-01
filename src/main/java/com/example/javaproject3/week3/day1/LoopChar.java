@@ -5,6 +5,13 @@ public class LoopChar {
         for (char c = 'a'; c <= 'z'; c++) {
             System.out.printf("%c ", c);
         }
+
+        System.out.println();
+
+        for (char c = '가'; c <= '힣'; c++) {
+            System.out.printf("%c ", c);
+        }
+
     }
 }
 
