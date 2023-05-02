@@ -1,6 +1,5 @@
 package com.example.javaproject3.programmers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SequenceAndQuery2 {
@@ -20,17 +19,17 @@ public class SequenceAndQuery2 {
 
 class Solution9 {
     public int[] solution(int[] arr, int[][] queries) {
+        int[] answer = new int[queries.length];
+        Arrays.fill(answer, Integer.MAX_VALUE);
 
-        int aLength = arr.length;
-        Arrays.sort(arr);
-        int[] answer = new int[aLength];
-
-        for (int i = 0; i < aLength; i++) {
-            for (int j = queries[i][0]; j < queries[i][1]; j++) {
-                System.out.println();
+        for (int i = 0; i < queries.length; i++) {
+            for (int j = queries[i][0]; j <= queries[i][1]; j++) {
+                if (arr[j] > queries[i][2]) {
+                    answer[i] = Math.min(answer[i], arr[j]);
+                }
             }
+            if (answer[i] == Integer.MAX_VALUE) answer[i] = -1;
         }
-
         return answer;
     }
 }
