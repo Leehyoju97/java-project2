@@ -8,12 +8,16 @@ public class CodeUp1071 {
         Scanner sc = new Scanner(System.in);
 
         String[] num = sc.nextLine().split(" ");
+        int i = 0;
+        String s = "";
 
-        for (String s : num) {
+
+        do {
+            s = num[i];
 
             if (s.equals("0")) break;
-
             System.out.println(s);
-        }
+            i++;
+        } while (!s.equals("0"));
     }
 }
