@@ -19,22 +19,35 @@ public class MakeArray {
 
 class Solution7 {
     public int[] solution(int l, int r) {
-
-        ArrayList<Integer> list = new ArrayList<>();
-        int[] result = new int[r - l];
+        int[] answer = {-1};
+        int[] result = new int[(r - l) / 5];
+        int idx = 0;
 
         for (int i = l; i <= r; i++) {
-
-            int temp = i;
-
-            while (temp > 0) {
-
-                if (temp % 10 != 0 && temp % 10 != 5) {
+            boolean flag = true;
+            int num = i;
+            while (num > 0) {
+                if ((num % 10) != 5 && (num % 10) != 0) {
+                    flag = false;
                     break;
                 }
+                num /= 10;
+            }
+            if (flag) {
+                result[idx++] = i;
             }
         }
 
-        return result;
+        if (idx == 0) {
+            return answer;
+        }
+
+        answer = new int[idx];
+
+        for (int i = 0; i < idx; i++) {
+            answer[i] = result[i];
+        }
+
+        return answer;
     }
 }
