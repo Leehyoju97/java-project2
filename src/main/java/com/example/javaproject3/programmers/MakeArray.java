@@ -21,14 +21,20 @@ class Solution7 {
     public int[] solution(int l, int r) {
 
         ArrayList<Integer> list = new ArrayList<>();
+        int[] result = new int[r - l];
 
-        for (int i = 1; i < 64; i++) {
-            String s = Integer.toBinaryString(i);
-            int num = Integer.parseInt(s) * 5;
-            if (l <= num && num <= r)
-                list.add(num);
+        for (int i = l; i <= r; i++) {
+
+            int temp = i;
+
+            while (temp > 0) {
+
+                if (temp % 10 != 0 && temp % 10 != 5) {
+                    break;
+                }
+            }
         }
 
-        return list.isEmpty() ? new int[] { -1 } : list.stream().mapToInt(i -> i).toArray();
+        return result;
     }
 }
