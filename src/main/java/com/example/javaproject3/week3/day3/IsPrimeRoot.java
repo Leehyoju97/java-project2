@@ -8,15 +8,15 @@ public class IsPrimeRoot {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int cnt = 0;
+        boolean isPrime = true;
 
         for (int i = 2; i * i <= n; i++) {
             if (n % i == 0) {
-                cnt++;
+                isPrime = false;
                 break;
             }
         }
 
-        System.out.println((cnt == 0) ? "prime" : "not prime");
+        System.out.println((isPrime) ? "prime" : "not prime");
     }
 }
