@@ -15,15 +15,37 @@ public class Factorization {
 }
 
 class Solution13 {
-    public int[] solution (int n) {
-        HashSet<Integer> set = new HashSet<>();
-        for (int i = 2; i <= n; i++) {
-            while (n % i == 0) {
-                set.add(i);
-                n /= i;
+    public int[] solution(int n) {
+        int[] arr = new int[n + 1];
+        int divisor = 2;
+
+        while (n > 1) {
+            if (n % divisor == 0) {
+                arr[divisor] = divisor;
+                n /= divisor;
+            } else {
+                divisor++;
             }
         }
 
-        return set.stream().mapToInt(Integer::intValue).sorted().toArray();
+        int count = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                count++;
+            }
+        }
+
+        int[] answer = new int[count];
+
+        int idx = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                answer[idx++] = arr[i];
+            }
+        }
+
+        return answer;
     }
 }
