@@ -23,10 +23,12 @@ public class CodeUp1097 {
             int x = sc.nextInt();
             int y = sc.nextInt();
 
+            // 가로 뒤집기
             for (int j = 1; j <= 19; j++) {
                 arr[x][j] = (arr[x][j] == 0) ? 1 : 0;
             }
 
+            // 세로 뒤집기
             for (int j = 1; j <= 19; j++) {
                 arr[j][y] = (arr[j][y] == 0) ? 1 : 0;
             }

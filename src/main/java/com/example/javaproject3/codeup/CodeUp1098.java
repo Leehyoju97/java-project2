@@ -18,10 +18,12 @@ public class CodeUp1098 {
             int x = sc.nextInt();
             int y = sc.nextInt();
 
+            // 가로
             if (d == 0) {
                 for (int j = y - 1; j < y - 1 + l; j++) {
                     matrix[x - 1][j] = 1;
                 }
+                // 세로
             } else if (d == 1) {
                 for (int j = x - 1; j < x - 1 + l; j++) {
                     matrix[j][y - 1] = 1;
