@@ -18,9 +18,9 @@ public class PyramidStar {
                 System.out.printf("*");
             }
 
-            for (int j = i; j < n; j++) {
-                System.out.printf(" ");
-            }
+//            for (int j = i; j < n; j++) {
+//                System.out.printf(" ");
+//            }
             System.out.println();
         }
     }

@@ -18,9 +18,9 @@ public class ReversePyramidStar {
                 System.out.printf("*");
             }
 
-            for (int j = 1; j < i; j++) {
-                System.out.printf(" ");
-            }
+//            for (int j = 1; j < i; j++) {
+//                System.out.printf(" ");
+//            }
             System.out.println();
         }
 
