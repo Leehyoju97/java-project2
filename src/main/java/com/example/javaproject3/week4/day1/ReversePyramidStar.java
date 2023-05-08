@@ -11,7 +11,7 @@ public class ReversePyramidStar {
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j < i; j++) {
-                System.out.printf("#");
+                System.out.printf(" ");
             }
 
             for (int j = 1; j <= n * 2 - 1 - 2 * (i - 1); j++) {
@@ -19,7 +19,7 @@ public class ReversePyramidStar {
             }
 
             for (int j = 1; j < i; j++) {
-                System.out.printf("#");
+                System.out.printf(" ");
             }
             System.out.println();
         }
