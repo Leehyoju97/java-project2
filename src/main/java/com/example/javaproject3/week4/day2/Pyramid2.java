@@ -21,8 +21,8 @@ public class Pyramid2 {
     public static void main(String[] args) {
         Pyramid2 pyramid2 = new Pyramid2(" ");
         Pyramid2 pyramidSpaceZero = new Pyramid2("0");
-        pyramid2.printPyramidWithSpaceChar(4);
-        pyramidSpaceZero.printPyramidWithSpaceChar(4);
+        pyramid2.printPyramidWithSpaceChar(5);
+        pyramidSpaceZero.printPyramidWithSpaceChar(5);
     }
 }
 
