@@ -5,6 +5,7 @@ public class MathCompareTest {
     public static void main(String[] args) {
         int[] numbers = {5, 3, 2, 4, 1};
 
+
         MathCompare mathCompare1 = new Max();
         int max = mathCompare1.get(numbers);
 
