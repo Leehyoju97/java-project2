@@ -5,12 +5,22 @@ import java.util.Scanner;
 public class CodeUp1098 {
 
     public static void main(String[] args) {
+        input();
+    }
+
+    private static void input () {
         Scanner sc = new Scanner(System.in);
 
         int h = sc.nextInt();
         int w = sc.nextInt();
         int n = sc.nextInt();
         int[][] matrix = new int[h][w];
+
+        coverBar(sc, n, matrix);
+        print(matrix, h, w);
+    }
+
+    private static void coverBar (Scanner sc, int n, int[][] matrix) {
 
         for (int i = 0; i < n; i++) {
             int l = sc.nextInt();
@@ -30,7 +40,10 @@ public class CodeUp1098 {
                 }
             }
         }
+    }
 
+    private static void print(int[][]matrix, int h, int w)
+    {
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++) {
                 System.out.printf("%d ", matrix[i][j]);
