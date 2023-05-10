@@ -15,10 +15,13 @@ public class RightTrianglePrinter {
     // 출력하기
     public void printToFile(String[] lines) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter("./aaa.txt"));
-        bw.append("aaa");
-        bw.flush();
+        for (int i = 0; i < lines.length; i++) {
+            bw.append(lines[i]);
+            bw.flush();
+        }
         bw.close();
     }
+
 
 
     // 콘솔에 모양 출력하기
@@ -29,7 +32,7 @@ public class RightTrianglePrinter {
     }
 
     // 모양 출력하기
-    public void printShape(int h) {
+    public void printShape(int h) throws IOException {
         // 모양 만들기
         String[] lines = new String[h];
         for (int i = 0; i < h; i++) {
@@ -37,7 +40,8 @@ public class RightTrianglePrinter {
         }
 
         // 모양 출력하기
-        printToConsole(lines);
+        //printToConsole(lines);
+        printToFile(lines);
     }
 
     public static void main(String[] args) throws IOException {
