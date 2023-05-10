@@ -4,14 +4,9 @@ import java.util.Scanner;
 
 public class DrawDiamond2 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int h = sc.nextInt();
-        int pivot = h / 2;
-
+    private void makeALine(int h, int pivot) {
         for (int i = 0; i < h; i++) {
             if(i <= pivot){
-
 
                 for (int j = 0; j < pivot - i; j++) {
                     System.out.print("0");
@@ -32,5 +27,14 @@ public class DrawDiamond2 {
                 System.out.println();
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int h = sc.nextInt();
+        int pivot = h / 2;
+
+        DrawDiamond2 drawDiamond2 = new DrawDiamond2();
+        drawDiamond2.makeALine(h, pivot);
     }
 }
