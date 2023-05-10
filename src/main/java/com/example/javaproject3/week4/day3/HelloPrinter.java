@@ -1,22 +1,24 @@
 package com.example.javaproject3.week4.day3;
 
-public class HelloPrinter {
-    // 파일에도 저장 하고 싶고
-    // 콘솔에도 출력 하고 싶다
+import java.io.IOException;
 
-    public void print(String message) {
-        System.out.println(message);
+public class HelloPrinter {
+
+    private StringPrinter stringPrinter;
+
+    public HelloPrinter(StringPrinter stringPrinter) {
+        this.stringPrinter = stringPrinter;
     }
 
-    public void repeatMessage(int n, String message) {
+    public void repeatMessage(int n, String message) throws IOException {
         for (int i = 0; i < n; i++) {
-            print(message);
+            stringPrinter.print(message);
         }
     }
 
-    public static void main(String[] args) {
-        HelloPrinter hp = new HelloPrinter();
-        hp.repeatMessage(5, "Hello");
+    public static void main(String[] args) throws IOException {
+        HelloPrinter hp = new HelloPrinter(new ConsoleHelloPrinter());
+        hp.repeatMessage(5, "hello");
     }
 }
 
