@@ -6,6 +6,12 @@ import java.io.IOException;
 
 public class RightTrianglePrinter {
 
+    private Printer printer;
+
+    public RightTrianglePrinter(Printer printer) {
+        this.printer = printer;
+    }
+
     // System.out.   --> Console
     // BufferedWriter --> Console, File
     public String makeALine(int h, int i) {
@@ -39,13 +45,11 @@ public class RightTrianglePrinter {
             lines[i] = makeALine(h, i + 1);
         }
 
-        // 모양 출력하기
-        //printToConsole(lines);
-        printToFile(lines);
+        printer.print(lines);
     }
 
     public static void main(String[] args) throws IOException {
-        RightTrianglePrinter rtp = new RightTrianglePrinter();
+        RightTrianglePrinter rtp = new RightTrianglePrinter(new ConsolePrinter());
         rtp.printShape(5);
     }
 }
