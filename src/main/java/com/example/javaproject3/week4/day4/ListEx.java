@@ -16,8 +16,14 @@ public class ListEx {
         l1.remove(0);
         System.out.println(l1.isEmpty());
 
+        System.out.println("---------------");
+
         int[] arr = new int[3];
         arr[0] = 1;
         arr[1] = 0;
+
+        for (int i : arr) {
+            System.out.println(i);
+        }
     }
 }
