@@ -6,11 +6,10 @@ public class CodeUp3108 {
 
     static List<Student> studentList = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
-
-    static int n = sc.nextInt();
     static int[] num = new int[5];
 
     public static void main(String[] args) {
+        int n = sc.nextInt();
         input(n);
         sort();
         inputNumber();
