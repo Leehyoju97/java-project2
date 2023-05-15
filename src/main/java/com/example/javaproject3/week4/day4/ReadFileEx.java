@@ -50,7 +50,7 @@ public class ReadFileEx {
 
         for (int i = 0; i< parseHospital.size(); i++) {
             Hospital hospital = parseHospital.get(i);
-            System.out.printf("%s %s\n", hospital.getName(), hospital.getWebsiteAddr());
+            System.out.printf("%s %s %s\n", hospital.getName(), hospital.getWebsiteAddr(), hospital.getAddress());
         }
 
     }
